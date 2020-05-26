@@ -148,14 +148,14 @@ form.signup input.form-control:focus {
 #wrapper {
   text-align: center;
   padding: 5% 0 8% 0;
-  background: url(../img/main-bg.png);
+  background: url(../img/main-bg-2.jpg);
   background-size: cover;
 }
 
 #wrapper_tutup {
   text-align: center;
   padding: 5% 0 19% 0;
-  background: url(../img/main-bg.png);
+  background: url(../img/main-bg-2.jpg);
   background-size: cover;
 }
 
