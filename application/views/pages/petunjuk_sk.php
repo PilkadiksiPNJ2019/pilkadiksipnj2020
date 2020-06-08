@@ -210,7 +210,7 @@
 						<li>Membayar uang pendaftaran pada saat pengambilan formulir sebesar Rp15.000,-.</li>
 						<li>Melengkapi berkas persyaratan sebagai berikut.</li>
 							<ol type="a" style="margin-left: 15px;">
-								<li>a.	Surat pernyataan pengambilan Formulir Pendaftaran dilengkapi foto formal berukuran 3x4.</li>
+								<li>Surat pernyataan pengambilan Formulir Pendaftaran dilengkapi foto formal berukuran 3x4.</li>
 								<li>Formulir pendaftaran dilengkapi foto formal terbaru berukuran 3x4.</li>
 								<li>Surat Perizinan Orang Tua/Wali.</li>
 								<li>Surat Pernyataan Ketersediaan Sebagai Bakal Calon Ketua Bidikmisi 2020/2021.</li>
