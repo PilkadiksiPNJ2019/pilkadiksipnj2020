@@ -163,8 +163,8 @@
 			<div class="col-12 col-md-12">
 				<div class="single-special wow fadeInUp" data-wow-delay="0.2s">
 					<ol>
-						<li>1.	Bakal calon ketua formadiksi 2020/2021 wajib mendaftarkan diri secara langsung dan tidak dapat diwakilkan dalam jangka waktu yang ditentukan.</li>
-						<li>2.	Bakal calon ketua formadiksi  2021/2021 wajib memiliki campaign manager yang memenuhi syarat yang sudah ditentukan.</li>
+						<li>Bakal calon ketua formadiksi 2020/2021 wajib mendaftarkan diri secara langsung dan tidak dapat diwakilkan dalam jangka waktu yang ditentukan.</li>
+						<li>Bakal calon ketua formadiksi  2021/2021 wajib memiliki campaign manager yang memenuhi syarat yang sudah ditentukan.</li>
 						<li>Adapun tata cara pendaftaran bakal calon ketua dan campaign manager sebagai berikut.</li>
 							<ol type="a" style="margin-left: 15px;">
 								<li>Bakal calon ketua formadiksi 2020/2021 wajib mengisi formulir pendaftaran dengan menghubungi kontak berikut. <b>+62 838 7180 9330 (Tria)</b></li>

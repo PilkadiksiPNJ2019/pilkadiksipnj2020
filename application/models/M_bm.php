@@ -29,5 +29,9 @@ class M_bm extends CI_Model{
 
     function create_mahasiswa($data){
         $this->db->insert('mahasiswa',$data);
+	}
+	
+	function create_balon($data){
+        $this->db->insert('bakal_calon',$data);
     }
 }

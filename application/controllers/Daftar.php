@@ -10,10 +10,10 @@ class Daftar extends CI_Controller {
 
 	public function index()
 	{
-        $data['title'] = 'Pilkadiksi PNJ 2019';
-        $data['main'] = 'main';
+        $data['title'] = 'Pilkadiksi PNJ 2020';
+        $data['main'] = 'evote';
         $data['navbar'] = $this->load->view('layout/navbar',array('main'=>$data),true);
-        $data['pages'] = $this->load->view('pages/daftar',array('main'=>$data),true);
+        $data['pages'] = $this->load->view('pages/daftar_balon',array('main'=>$data),true);
 		$this->load->view('main',array('main'=>$data));
 	}
 
@@ -39,6 +39,6 @@ class Daftar extends CI_Controller {
                 <strong> Terima Kasih sudah mendaftar. Harap tunggu dan periksa email Anda untuk mendapatkan username dan password.</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             </div>');
-        redirect('.');
+        redirect('main');
     }
 }
