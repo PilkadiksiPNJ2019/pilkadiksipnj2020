@@ -12,7 +12,7 @@
                     </div>
                     <div class="single-special">
                     	<h6>Belum tahu E-Vote?</h6>
-                    	<p>Ayo ikuti langkah - langkah penggunaannya. <a href="<?php echo site_url('evote');?>">Klik disini.</a></p>
+                    	<p>Ayo ikuti langkah - langkah penggunaannya. <a href="<?php echo site_url('evote');?>" style="color:#000;">Klik disini.</a></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-5 ml-xl-auto">
@@ -47,7 +47,7 @@
                         			<button type="submit" class="btn btn-info">Cek</button>
                         		</div>
                         	</div><br>
-                            <p>Sudah terdaftar tapi belum dapat username dan password? Harap periksa email atau hubungi panitia.</p>
+                            <p>Sudah terdaftar tapi belum dapat username dan password? Harap periksa email atau hubungi panitia pilkadiksi pnj 2020.</p>
                         <?php echo form_close();?>
                     </div>
                 </div>

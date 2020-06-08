@@ -10,8 +10,8 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-        $data['title'] = 'Pilkadiksi PNJ 2019';
-        $data['main'] = 'main';
+        $data['title'] = 'Pilkadiksi PNJ 2020';
+        $data['main'] = 'evote';
         $data['navbar'] = $this->load->view('layout/navbar',array('main'=>$data),true);
         $data['pages'] = $this->load->view('pages/main',array('main'=>$data),true);
 		$this->load->view('main',array('main'=>$data));
@@ -35,7 +35,7 @@ class Main extends CI_Controller {
             		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;
             		</button>
             	</div>');
-			redirect('.');
+			redirect('main');
         }else{
             $this->session->set_flashdata('notif',
             	'<div class="alert alert-danger alert-dismissible">
@@ -43,7 +43,7 @@ class Main extends CI_Controller {
             		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;
             		</button>
             	</div>');
-			redirect('.');
+			redirect('main');
         }
     }
 
@@ -70,7 +70,7 @@ class Main extends CI_Controller {
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;
 					</button>
 					</div>');
-				redirect('.');
+				redirect('main');
 			}
 		}
 	}

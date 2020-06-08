@@ -26,7 +26,18 @@
                                     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('main/logout');?>">Logout</a></li>
                                 </ul>
                             <?php
-                                }
+                                } else if ($main['main']=='evote') {
+							?>
+								<ul class="navbar-nav ml-auto" id="nav">
+									<li class="nav-item"><a class="nav-link" href="<?php echo site_url('.');?>">Timeline</a></li></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo site_url('.');?>">Petunjuk</a></li></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo site_url('.');?>">Syarat dan Ketentuan</a></li></li>
+                                    <li class="nav-item"><a class="nav-link" href="<?php echo site_url('main');?>">Sistem E-vote</a></li></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Daftar</a></li></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li></li>
+                                </ul>
+							<?php
+								}
                             ?>
                         </div>
                     </nav>
