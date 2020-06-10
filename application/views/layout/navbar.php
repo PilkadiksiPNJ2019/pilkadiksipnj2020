@@ -20,7 +20,7 @@
                                     <!-- <li class="nav-item"><a class="nav-link" href="<?php echo site_url('pilkadiksi');?>">Belum tahu Pilkadiksi?</a></li> -->
                                 </ul>
                             <?php
-                                } else if ($main['main']=='home') {
+                                } else if ($main['main']=='evote_sistem') {
                             ?>
                                 <ul class="navbar-nav ml-auto" id="nav">
                                     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('main/logout');?>">Logout</a></li>
@@ -48,10 +48,10 @@
 </header>
 
 <!-- Modal Login -->
-<div class="modal fade" id="Mylogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Mylogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog">
     <div class="modal-content text-white" style="background-color: #28B6FF;">
-    <?php echo form_open_multipart('bakal_calon/login/');?>
+    <?php echo form_open_multipart('petunjuk_sk/login');?>
       <div class="modal-header">
         <h5 class="modal-title text-white">Login</h5>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
@@ -59,23 +59,21 @@
         </button>
       </div>
       <div class="modal-body">
-			<form>
-				<div class="form-group row">
-					<label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
-					<div class="col-sm-10">
-					<input type="text" class="form-control" id="staticEmail" placeholder="Username">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-					<div class="col-sm-10">
-					<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-					</div>
-				</div>
-			</form>
+		<div class="form-group row">
+			<label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+			<div class="col-sm-10">
+			<input type="text" class="form-control" name="username" id="staticEmail" placeholder="Username" required>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+			<div class="col-sm-10">
+			<input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password" required>
+			</div>
+		</div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-success">Login</button>
+        <button type="submit" name="login_balon" class="btn btn-success">Login</button>
       </div>
     <?php echo form_close();?>
     </div>

@@ -1,0 +1,78 @@
+.login-page,
+.register-page {
+	min-height: auto;
+	background: none;
+}
+.login-logo img {
+	width: 20%;
+}
+.register-logo img {
+	width: 20%;
+}
+.logo-lg img {
+	width: 20%;
+}
+.logo-mini img {
+	width: 100%;
+	padding: 5px;
+}
+.login-box, .register-box{
+	border: 1px solid #ccc!important;
+    padding-top: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #d3d3d3;
+}
+.login-logo, .register-logo{
+	margin-bottom: auto;
+}
+.btn-hajj {
+	background-color: #34784f;
+	color: #ffffff;
+}
+.btn-hajj:hover {
+	color: #fff;
+	font-weight: bold;
+	background-color: #356B47;
+}
+
+.btn-hajj:focus {
+	background-color: #34784f;
+	color: #ffffff;
+}
+
+.alert-hajj {
+	background-color: #34784f;
+	color: #ffffff;
+}
+
+.small-box .icon{
+	top: 6px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header{
+	height: auto;
+}
+
+.content-wrapper{
+	min-height: 568px;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header>p{
+	color: #fff;
+}
+
+.login-box-body, .register-box-body{
+	border-radius: 10px;
+}
+
+.has-feedback .form-control{
+	border-radius: 10px;
+}
+
+.btn.btn-flat{
+	border-radius: 10px;
+}
+
+.modal-content{
+	border-radius: 10px;
+}
