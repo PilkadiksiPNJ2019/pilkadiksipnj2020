@@ -40,7 +40,9 @@ class Berkas_balon extends CI_Controller {
 	    if ($cek==0) {
     		$data = array(
 				'nim' => $nim,
-	            'file_bayar' => $file_bayar
+				'file_bayar' => $file_bayar,
+				'status_bayar' => 0,
+				'status_cm' => 0
 	    	);
             $this->m_bm->create_berkas($data);
             $this->session->set_flashdata('notif','<div class="alert alert-success alert-dismissible"><strong> Bukti Pembayaran berhasil di unggah, tunggu beberapa saat sampai Tim kami mengecek pembayaran.</strong><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>');

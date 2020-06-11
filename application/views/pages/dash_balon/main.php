@@ -1,12 +1,14 @@
 <?php
 	$file_bayar = "";
   $status_bayar = "";
+  $status_cm = "";
   $file_watermark = "";
   $file_balon = "";
   $link_wawancara = "";
 	foreach ($berkas as $key => $value) {
 		$file_bayar = $value->file_bayar;
 		$status_bayar = $value->status_bayar;
+		$status_cm = $value->status_cm;
 		$file_watermark = $value->file_watermark;
 		$file_balon = $value->file_balon;
 		$link_wawancara = $value->link_wawancara;
@@ -74,11 +76,7 @@
 							</div>
 						</li>
 						<?php 
-						if ($status_bayar==0) {
-							?>
-							
-							<?php
-						}else{
+						if ($status_cm==0 && $status_bayar==1) {
 							?>
 						<li>
               <i class="fa fa-user bg-maroon"></i>
@@ -86,14 +84,33 @@
                 <span class="time"><i class="fa fa-close text-danger"></i></span>
                 <h3 class="timeline-header"><a>Daftarkan Campaign Manager</a></h3>
                 <div class="timeline-body">
-                  Bakal calon wajib mempunyai campaign manager. Untuk mendaftarkan campaign manager bisa klik tombol dibawah atau melalui menu Campaign Manager.
+                  Untuk dapat ke tahap selanjutnya, bakal calon wajib mendaftarkan campaign manager. Untuk mendaftarkan Campaign Manager bisa klik tombol dibawah atau melalui menu Campaign Manager.
                 </div>
                 <div class="timeline-footer">
                   <a href="<?php echo base_url('data_cm');?>" class="btn bg-maroon btn-flat btn-xs">Klik disini</a>
                 </div>
               </div>
             </li>
+							<?php
+						}else if($status_cm==1 && $status_bayar==1){
+							?>
             <li>
+              <i class="fa fa-user bg-maroon"></i>
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-check text-success"></i></span>
+                <h3 class="timeline-header"><a>Daftarkan Campaign Manager</a></h3>
+                <div class="timeline-body">
+                  <b>Terima Kasih</b> sudah mendaftarkan Campaign Manager.
+                </div>
+              </div>
+            </li>
+							<?php
+						}
+						?>
+						<?php 
+						if ($status_cm==1 && $status_bayar==1 && $file_balon=="") {
+							?>
+						<li>
               <i class="fa fa-file-pdf-o bg-yellow"></i>
               <div class="timeline-item">
                 <span class="time"><i class="fa fa-close text-danger"></i></span>
@@ -103,6 +120,19 @@
                 </div>
                 <div class="timeline-footer">
                   <a href="<?php echo base_url('berkas_balon');?>" class="btn btn-warning btn-flat btn-xs">Klik disini</a>
+                </div>
+              </div>
+            </li>
+							<?php
+						}else if($status_cm==1 && $status_bayar==1 && $file_balon!=""){
+							?>
+            <li>
+              <i class="fa fa-file-pdf-o bg-yellow"></i>
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-check text-success"></i></span>
+                <h3 class="timeline-header"><a>Lengkapi Berkas</a></h3>
+                <div class="timeline-body">
+                  <b>Terima Kasih</b> sudah melengkapi berkas.
                 </div>
               </div>
             </li>
@@ -139,7 +169,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li style="display: none;">
               <i class="fa fa-video-camera bg-purple"></i>
               <div class="timeline-item">
                 <span class="time"><i class="fa fa-close text-danger"></i></span>
@@ -185,7 +215,7 @@
               </span>
             </li>
             <li>
-              <i class="fa fa-video-camera bg-red"></i>
+              <i class="fa fa-clock-o bg-red"></i>
               <div class="timeline-item">
                 <span class="time"><i class="fa fa-close text-danger"></i></span>
                 <h3 class="timeline-header"><a>Masa Tenang</a></h3>
@@ -200,7 +230,7 @@
               </span>
             </li>
             <li>
-              <i class="fa fa-video-camera bg-green"></i>
+              <i class="fa fa-hand-o-up bg-green"></i>
               <div class="timeline-item">
                 <span class="time"><i class="fa fa-close text-danger"></i></span>
                 <h3 class="timeline-header"><a>Pemilihan</a></h3>
@@ -209,7 +239,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li style="display: none;">
               <i class="fa fa-video-camera bg-green"></i>
               <div class="timeline-item">
                 <span class="time"><i class="fa fa-close text-danger"></i></span>
@@ -220,7 +250,7 @@
               </div>
             </li>
             <li>
-              <i class="fa fa-clock-o bg-gray"></i>
+              <i class="fa fa-music bg-gray"></i>
             </li>
           </ul>
         </div>

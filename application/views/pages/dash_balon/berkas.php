@@ -1,6 +1,7 @@
 <?php
   $file_bayar = "";
   $status_bayar = "";
+  $status_cm = "";
   $file_watermark = "";
   $file_balon = "";
   $link_wawancara = "";
@@ -8,6 +9,7 @@
 	foreach ($berkas as $key => $value) {
 		$file_bayar = $value->file_bayar;
 		$status_bayar = $value->status_bayar;
+		$status_cm = $value->status_cm;
 		$file_watermark = $value->file_watermark;
 		$file_balon = $value->file_balon;
 		$link_wawancara = $value->link_wawancara;
@@ -52,33 +54,33 @@
                     <?php
                     }else{
                     ?>
-					<label class="control-label text-danger">Belum melakukan pembayaran!</label>
-					<input type="file" class="form-control" name="file_bayar">
+										<label class="control-label text-danger">Belum melakukan pembayaran!</label>
+										<input type="file" class="form-control" name="file_bayar">
                     <?php
                     }
                     ?>
                 </div>
-			</div>
-			<?php 
-				if ($status_bayar==0) {
-					
-				}else{
-			?>
-			<div class="form-group">
-                <label class="col-sm-2 control-label">File Berkas : </label>
-                <div class="col-sm-10">
-				    <a href="<?php echo $file_watermark;?>" target="__BLANK" class="btn btn-primary btn-flat">Download</a>
-                </div>
-			</div>
-			<div class="form-group">
-                <label class="col-sm-2 control-label">Pengumpulan Berkas Bakal Calon : </label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file_balon" placeholder="Link Google Drive" value="<?php echo $file_balon;?>">
-                </div>
-            </div>
-			<?php
-				}
-			?>
+							</div>
+							<?php 
+								if ($status_bayar==0 && $status_cm==0 || $file_watermark=="") {
+								}else if ($status_bayar==1 && $status_cm==0 || $file_watermark==""){
+								}else if ($status_bayar==1 && $status_cm==1 || $file_watermark!=""){
+							?>
+							<div class="form-group">
+												<label class="col-sm-2 control-label">File Berkas : </label>
+												<div class="col-sm-10">
+										<a href="<?php echo $file_watermark;?>" target="__BLANK" class="btn btn-primary btn-flat">Download</a>
+												</div>
+							</div>
+							<div class="form-group">
+												<label class="col-sm-2 control-label">Pengumpulan Berkas : </label>
+												<div class="col-sm-10">
+														<input type="text" class="form-control" name="file_balon" placeholder="Link Google Drive" value="<?php echo $file_balon;?>">
+												</div>
+										</div>
+							<?php
+								}
+							?>
             <hr>
             <div class="form-group">
               <div class="col-sm-2 control-label"></div>

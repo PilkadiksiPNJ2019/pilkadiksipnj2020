@@ -46,10 +46,20 @@ class M_bm extends CI_Model{
         $this->db->where("nim", $id);
         return $this->db->get('bakal_calon')->result();
 	}
+	public function get_cm($id)
+    {
+        $this->db->where("nim_balon", $id);
+        return $this->db->get('campaign_manager')->result();
+	}
 	public function get_berkas_balon($id)
     {
         $this->db->where("nim", $id);
         return $this->db->get('berkas_balon')->result();
+	}
+	public function update_balon($id, $data)
+    {
+        $this->db->where("nim", $id);
+        $this->db->update('bakal_calon', $data);
 	}
 	public function update_berkas($id, $data)
     {
@@ -58,5 +68,13 @@ class M_bm extends CI_Model{
 	}
 	function create_berkas($data){
         $this->db->insert('berkas_balon',$data);
+	}
+	public function update_cm($id, $data)
+    {
+        $this->db->where("nim_balon", $id);
+        $this->db->update('campaign_manager', $data);
+	}
+	function create_cm($data){
+        $this->db->insert('campaign_manager',$data);
 	}
 }
